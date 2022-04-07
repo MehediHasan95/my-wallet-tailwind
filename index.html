@@ -1,0 +1,136 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Wallet</title>
+    <!-- Tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontawesome link -->
+    <script
+      src="https://kit.fontawesome.com/825c74232b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1 class="text-5xl font-bold text-center my-5 text-gray-800">
+        My <span class="text-rose-700">W</span>allet
+        <i class="fa-solid fa-wallet"></i>
+      </h1>
+    </header>
+    <!-- main -->
+    <main>
+      <section>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="p-6">
+            <img src="images/my-wallet.jpg" alt="" />
+          </div>
+          <div class="p-5">
+            <div class="bg-gray-100 p-10">
+              <h3 class="text-3xl font-bold text-slate-800 text-center mb-3">
+                Income
+              </h3>
+              <label class="font-bold text-slate-800">Income:</label>
+              <input
+                type="text"
+                id="income"
+                class="block bg-gray-200 px-2 py-2 mb-3 w-full outline-sky-300"
+                placeholder="$"
+              />
+
+              <h3 class="text-3xl font-bold text-slate-800 text-center mb-3">
+                Expenses
+              </h3>
+              <label class="font-bold text-slate-800">Food:</label>
+              <input
+                type="text"
+                id="food"
+                class="block bg-gray-200 px-2 py-2 mb-3 w-full outline-sky-300"
+                placeholder="$"
+              />
+
+              <label class="font-bold text-slate-800">Rent:</label>
+              <input
+                type="text"
+                id="rent"
+                class="block bg-gray-200 px-2 py-2 mb-3 w-full outline-sky-300"
+                placeholder="$"
+              />
+
+              <label class="font-bold text-slate-800">Clothes:</label>
+              <input
+                type="text"
+                id="clothes"
+                class="block bg-gray-200 px-2 py-2 mb-3 w-full outline-sky-300"
+                placeholder="$"
+              />
+              <button
+                id="calculator-btn"
+                class="bg-sky-300 px-2 py-2 mb-3 w-full text-white font-bold hover:bg-sky-400"
+              >
+                Calculate
+              </button>
+
+              <div>
+                <!-- Total Expenses -->
+                <h1
+                  class="text-xl md:text-3xl font-bold text-slate-800 text-center my-5"
+                >
+                  Total Expenses:
+                  <i class="fa-solid fa-dollar-sign"></i
+                  ><span id="total-expenses">0</span>
+                </h1>
+                <!-- Total Balance -->
+                <h1
+                  class="text-xl md:text-3xl font-bold text-slate-800 text-center my-5"
+                >
+                  Balance:
+                  <i class="fa-solid fa-dollar-sign"></i
+                  ><span id="total-balance">0</span>
+                </h1>
+                <!-- Saving -->
+                <div class="text-center my-8">
+                  <label class="mr-3 text-base md:text-xl">Save</label>
+                  <input
+                    type="text"
+                    id="saving-amount"
+                    class="bg-gray-200 px-2 py-2 mb-3 w-3/12 outline-sky-300 text-center"
+                    placeholder="$"
+                  />
+                  <span class="mx-3 text-base md:text-xl">%</span>
+                  <button
+                    id="save-btn"
+                    class="bg-sky-300 px-2 py-2 mb-3 w-3/12 text-white font-bold hover:bg-sky-400"
+                  >
+                    Save
+                  </button>
+                </div>
+                <!-- Saving and Remaining Amount -->
+                <h1
+                  class="text-xl md:text-3xl font-bold text-slate-800 text-center my-5"
+                >
+                  Saving Amount:
+                  <i class="fa-solid fa-dollar-sign"></i
+                  ><span id="total-saving">0</span>
+                </h1>
+                <!-- Total Balance -->
+                <h1
+                  class="text-xl md:text-3xl font-bold text-slate-800 text-center my-5"
+                >
+                  Remaining Balance:
+                  <i class="fa-solid fa-dollar-sign"></i
+                  ><span id="remaining-balance">0</span>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- script -->
+    <script src="app.js"></script>
+  </body>
+</html>
